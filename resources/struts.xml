@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <!-- 把扩展名配置为action -->
+    <constant name="struts.action.extension" value="action" />
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.multipart.maxSize" value="1000000000" />
+	
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="index_*" class="indexAction" method="{1}">
+			<result name="index">/WEB-INF/jsp/indexAction/index.jsp</result>
+			<result name="infos">/WEB-INF/jsp/indexAction/infos.jsp</result>
+			<result name="infoUI">/WEB-INF/jsp/indexAction/infoUI.jsp</result>
+			<result name="act">/WEB-INF/jsp/indexAction/act.jsp</result>
+			<result name="actUI">/WEB-INF/jsp/indexAction/actUI.jsp</result>
+			<result name="doc">/WEB-INF/jsp/indexAction/doc.jsp</result>
+		</action>
+		<!-- 登录 -->
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="loginUI">/login.jsp</result>
+			<!-- 管理员权限 -->
+			<result name="admin">/WEB-INF/jsp/admin/admin.html</result>
+			<result name="ahead">/WEB-INF/jsp/admin/head.html</result>
+			<result name="aleft">/WEB-INF/jsp/admin/left.html</result>
+			<!-- 教师权限 -->
+			<result name="teacher">/WEB-INF/jsp/teacher/tindex.jsp</result>
+			<result name="tleft">/WEB-INF/jsp/teacher/tleft.jsp</result>
+			
+		<!-- 教师权限 -->
+			<result name="sender">/WEB-INF/jsp/sender/index.jsp</result>
+			<result name="sleft">/WEB-INF/jsp/sender/left.jsp</result>
+		</action>
+		
+		
+		<!-- 项目管理 -->
+		<action name="info_*" class="infoAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/infosAction/list.jsp</result>
+			<result name="info">/WEB-INF/jsp/infosAction/info.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/infosAction/saveUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/infosAction/editUI.jsp</result>
+			<result name="toList" type="redirectAction">info_list</result>
+		</action>
+		
+		
+		
+				<!-- 项目管理 -->
+		<action name="ticket_*" class="ticketAction" method="{1}">
+			<result name="infos">/WEB-INF/jsp/ticketAction/infos.jsp</result>
+			<result name="list">/WEB-INF/jsp/ticketAction/list.jsp</result>
+			<result name="search">/WEB-INF/jsp/ticketAction/needlist.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/ticketAction/saveUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/ticketAction/editUI.jsp</result>
+			<result name="toList" type="redirectAction">ticket_list</result>
+		</action>
+		
+						<!-- 项目管理 -->
+		<action name="train_*" class="trainAction" method="{1}">
+			<result name="infos">/WEB-INF/jsp/trainAction/infos.jsp</result>
+			<result name="list">/WEB-INF/jsp/trainAction/list.jsp</result>
+			<result name="search">/WEB-INF/jsp/trainAction/needlist.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/trainAction/saveUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/trainAction/editUI.jsp</result>
+			<result name="toList" type="redirectAction">train_list</result>
+		</action>
+		
+				
+						<!-- 项目管理 -->
+		<action name="trainpath_*" class="trainpathAction" method="{1}">
+			<result name="infos">/WEB-INF/jsp/trainpathAction/infos.jsp</result>
+			<result name="list">/WEB-INF/jsp/trainpathAction/list.jsp</result>
+			<result name="saveUI">/WEB-INF/jsp/trainpathAction/saveUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/trainpathAction/editUI.jsp</result>
+			<result name="toList" type="redirectAction">trainpath_list</result>
+		</action>
+		
+		<!-- 用户管理 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/userAction/list.jsp</result>
+			<result name="toList" type="redirectAction">user_list</result>
+			<result name="saveUI">/WEB-INF/jsp/userAction/saveUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/userAction/editUI.jsp</result>
+			<result name="pwdUI">/WEB-INF/jsp/userAction/pwdUI.jsp</result>
+			<result name="changeUI">/WEB-INF/jsp/userAction/infoUI.jsp</result>
+			<result name="change">main.html</result>
+		</action>
+		
+				
+	</package>
+	
+</struts> 

@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebRoot/style/register-login.css=UTF-8
+encoding//src/com/sise/internsystem/action/InfoAction.java=UTF-8
+encoding//src/com/sise/internsystem/action/TicketAction.java=UTF-8
+encoding//src/com/sise/internsystem/action/TrainAction.java=UTF-8
+encoding//src/com/sise/internsystem/action/TrainpathAction.java=UTF-8
+encoding//src/com/sise/internsystem/base/BaseAction.java=UTF-8
+encoding//src/com/sise/internsystem/base/DaoSupport.java=UTF-8
+encoding//src/com/sise/internsystem/base/DaoSupportImpl.java=UTF-8
+encoding//src/com/sise/internsystem/entity/User.java=UTF-8
+encoding//src/com/sise/internsystem/util/QueryHelper.java=UTF-8

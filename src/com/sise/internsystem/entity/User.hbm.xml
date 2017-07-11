@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sise.internsystem.entity">
+
+	<class name="User" table="t_user">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="no" />
+		<property name="pwd" />
+		<property name="name" />
+		<property name="gender" />
+		<property name="tel" />
+		<property name="description" />
+		<property name="role" />
+		<property name="email" />
+	</class>
+	
+</hibernate-mapping>
